@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "1ac6f6a9-e7a9-4775-9581-d9ccbec46c00",
+		"name": "Omni",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Omni - Admin - GET /system",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/omni/catalog/system",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"omni",
+						"catalog",
+						"system"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Omni - Admin - GET /products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/omni/catalog/products",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"omni",
+						"catalog",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

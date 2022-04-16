@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omni-catalog-api-deployment
+  labels:
+    app: omni-catalog-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: omni-catalog-api
+  template:
+    metadata:
+      labels:
+        app: omni-catalog-api
+    spec:
+      containers:
+        - name: omni-catalog-api-container
+          image: omni-catalog-api
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /system/ping
+              port: 8080
+          livenessProbe:
+            httpGet:
+              path: /system/ping
+              port: 8080
